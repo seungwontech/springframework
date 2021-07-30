@@ -7,5 +7,21 @@
 		select * from tb_board where bno > 0 order by bno
 	]]>
 	</select>
+	<insert id="insert">
+		insert into tb_board (
+			bno
+			, title
+			, content
+			, reg_dt
+			, mod_dt
+			, user
+		) values(
+			#{bno}
+			, #{title}
+			, #{content}
+			, #{writer}
+			)
+	</insert>
+	
 
 </mapper>
