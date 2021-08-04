@@ -21,9 +21,9 @@ public class BoardController {
 	//public void list(Criteria cri, Model model) {
 	public void list(Model model) {
 		model.addAttribute("list", service.getList());
-	//	model.addAttribute("pageMaker", new PageDTO(cri,123));
+		//model.addAttribute("pageMaker", new PageDTO(cri,123));
 		int total = service.getTotal();
-//		model.addAttribute("pageMaker", new PageDTO(cri,total));
+		//model.addAttribute("pageMaker", new PageDTO(cri,total));
 	}
 	// 등록
 //	@GetMapping("/register")

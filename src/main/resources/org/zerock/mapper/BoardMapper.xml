@@ -40,11 +40,11 @@
 
 
 	<insert id="insert">
-
+<!-- 
 		<selectKey resultType="long" keyProperty="bno"
 			order="BEFORE">select seq_board.nextval from dual</selectKey>
 		insert into tbl_board (bno,title,content, writer) values
-		(#{bno},#{title}, #{content}, #{writer})
+		(#{bno},#{title}, #{content}, #{writer}) -->
 	</insert>
 
 	<select id="read" resultType="org.zerock.domain.BoardVO">select * from tbl_board where
@@ -52,8 +52,9 @@
 
 	<delete id="delete">delete from tbl_board where bno=#{bno}</delete>
 
-	<update id="update">update tbl_board set title= #{title},
+	<update id="update"><!-- update tbl_board set title= #{title},
 		content=#{content}, writer = #{writer}, updateDate = sysdate where
-		bno=#{bno}</update>
+		bno=#{bno} -->
+		</update>
 
 </mapper>

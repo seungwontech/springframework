@@ -18,24 +18,24 @@ public class BoardServiceImpl implements BoardService {
 	
 	private BoardMapper mapper;
 	
+//	@Override
+//	public void register(BoardVO board) {
+//		mapper.insert(board);
+//	}
 	@Override
-	public void register(BoardVO board) {
-		mapper.insert(board);
-	}
-	@Override
-	public BoardVO get(Long bno) {
+	public BoardVO get(Integer bno) {
 		return mapper.read(bno);
 	}
-	@Override
-	//수정
-	public boolean modify(BoardVO board) {
-		return mapper.update(board) ==1;
-	}
-	@Override
-	//삭제
-	public boolean remove(Long bno) {
-		return mapper.delete(bno)==1;
-	}
+//	@Override
+//	//수정
+//	public boolean modify(BoardVO board) {
+//		return mapper.update(board) ==1;
+//	}
+//	@Override
+//	//삭제
+//	public boolean remove(Integer  bno) {
+//		return mapper.delete(bno)==1;
+//	}
 
 	@Override
 	public List<BoardVO> getList() {
@@ -45,5 +45,11 @@ public class BoardServiceImpl implements BoardService {
 	public int getTotal() {
 		return mapper.getTotalCount();
 	}
+
+//	@Override
+//	public void register(BoardVO board) {
+//		// TODO Auto-generated method stub
+//		
+//	}
 	
 }
