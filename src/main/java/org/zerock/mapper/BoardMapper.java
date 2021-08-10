@@ -7,11 +7,5 @@ import org.zerock.domain.BoardVO;
 public interface BoardMapper {
 
 	public List<BoardVO> getList();
-	public List<BoardVO> getListWithPaging();//페이징
-	public void insert(BoardVO board);
-	public BoardVO read(Integer bno);
-	public int delete(Integer bno);
-	public int update(BoardVO board);
-	public int getTotalCount();
 	
 }

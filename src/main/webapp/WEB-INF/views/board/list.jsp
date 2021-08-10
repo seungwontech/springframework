@@ -34,9 +34,9 @@
 							<td><c:out value="${board.bno}" /></td>
 							<td><a class='move' href='<c:out value="${board.bno}"/>'>
 							<c:out value="${board.title}"/></a></td>
-							<td><c:out value="${board.writer}" /></td>
+<%-- 							<td><c:out value="${board.writer}" /></td>
 							<td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.regdate}" /></td>
-							<td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.updateDate}" /></td>
+							<td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.updateDate}" /></td> --%>
 						</tr>
 					</c:forEach>
 				</table>
@@ -77,7 +77,7 @@
 				 <div class='pull-right'>
 					<ul class="pagination">
 				<!-- 페이징 -->
-						<c:if test="${pageMaker.prev}">
+<%-- 						<c:if test="${pageMaker.prev}">
 							<li class="paginate_button previous"><a
 								href="${pageMaker.startPage -1}">Previous</a></li>
 						</c:if>
@@ -92,17 +92,17 @@
 						<c:if test="${pageMaker.next}">
 							<li class="paginate_button next"><a href="${pageMaker.endPage +1 }">Next</a></li>
 						</c:if>
-
+ --%>
 					</ul>
 				</div>
 				<!--  end Pagination -->
 			</div>
-			<form id='actionForm' action="/board/list" method='get'>
+<%-- 			<form id='actionForm' action="/board/list" method='get'>
 				<input type='text' name='pageNum' value='${pageMaker.cri.pageNum}'>
 				<input type='text' name='amount' value='${pageMaker.cri.amount}'>
 				<input type='text' name='type' value='<c:out value="${ pageMaker.cri.type }"/>'>
 				<input type='text' name='keyword' value='<c:out value="${ pageMaker.cri.keyword }"/>'>
-			</form>
+			</form> --%>
 				
 				<!-- Modal  추가 -->
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog"

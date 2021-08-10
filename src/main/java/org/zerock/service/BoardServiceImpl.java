@@ -15,41 +15,11 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class BoardServiceImpl implements BoardService {
 	@Autowired
-	
 	private BoardMapper mapper;
-	
-//	@Override
-//	public void register(BoardVO board) {
-//		mapper.insert(board);
-//	}
-	@Override
-	public BoardVO get(Integer bno) {
-		return mapper.read(bno);
-	}
-//	@Override
-//	//수정
-//	public boolean modify(BoardVO board) {
-//		return mapper.update(board) ==1;
-//	}
-//	@Override
-//	//삭제
-//	public boolean remove(Integer  bno) {
-//		return mapper.delete(bno)==1;
-//	}
 
 	@Override
 	public List<BoardVO> getList() {
-		return mapper.getListWithPaging();
+		return mapper.getList();
 	}
-	@Override
-	public int getTotal() {
-		return mapper.getTotalCount();
-	}
-
-//	@Override
-//	public void register(BoardVO board) {
-//		// TODO Auto-generated method stub
-//		
-//	}
 	
 }
