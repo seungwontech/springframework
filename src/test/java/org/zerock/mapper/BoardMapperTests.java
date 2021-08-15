@@ -17,6 +17,7 @@ public class BoardMapperTests {
 
 	@Test
 	public void testGetList() {
+
 		boardMapper.getList();
 	}
 }
