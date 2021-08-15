@@ -3,7 +3,7 @@
 <mapper namespace="org.zerock.mapper.BoardMapper">
 
 	<select id="getList" resultType="org.zerock.domain.BoardVO">
-		select * from tb_board order by bno
+		select * from springframework.tb_board order by bno
 	</select>
 
 </mapper>

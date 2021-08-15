@@ -18,4 +18,5 @@ public class BoardVO {
 	private Date reg_dt;
 	
 	private Date mod_dt;
+
 }
